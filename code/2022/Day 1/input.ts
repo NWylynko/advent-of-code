@@ -2234,4 +2234,4 @@ export const elvesCalories = `3120
 8227
 5186
 5159
-1952`
+1952`;

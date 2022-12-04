@@ -3,6 +3,7 @@
   "module": "scripts/index.ts",
   "type": "module",
   "devDependencies": {
-    "bun-types": "^0.2.0"
+    "bun-types": "^0.2.0",
+    "rome": "^10.0.1"
   }
 }

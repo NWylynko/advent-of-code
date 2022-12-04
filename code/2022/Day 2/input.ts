@@ -1,4 +1,3 @@
-
 export const input = `B Z
 B X
 C Y
@@ -2498,4 +2497,4 @@ C Y
 B Y
 B Y
 C Y
-B Y`
+B Y`;

@@ -1,30 +1,26 @@
-import { input } from "./input"
+import { input } from "./input";
 
 const decode = (rucksacks: string[]) => {
-
   return rucksacks.map((rucksack) => {
+    const rucksackLength = rucksack.length / 2;
 
-    const rucksackLength = rucksack.length / 2
+    const firstRuckSack = rucksack.slice(0, rucksackLength);
+    const secondRuckStack = rucksack.slice(rucksackLength, rucksack.length);
 
-    const firstRuckSack = rucksack.slice(0, rucksackLength)
-    const secondRuckStack = rucksack.slice(rucksackLength, rucksack.length)
-
-    return [firstRuckSack, secondRuckStack]
-
-  })
-
-}
+    return [firstRuckSack, secondRuckStack];
+  });
+};
 
 const findOverlaps = (rucksacks: string[][]) => {
   return rucksacks.map((rucksack) => {
     for (const item of rucksack[0]) {
       if (rucksack[1].includes(item)) {
-        return item
+        return item;
       }
     }
-    throw new Error(`cound't find overlap`)
-  })
-}
+    throw new Error(`cound't find overlap`);
+  });
+};
 
 const priorities = {
   a: 1,
@@ -80,15 +76,15 @@ const priorities = {
   X: 50,
   Y: 51,
   Z: 52,
-}
+};
 
 export const calcPriority = (overlappers: string[]): number[] => {
-  return overlappers.map((overlap) => priorities[overlap])
-}
+  return overlappers.map((overlap) => priorities[overlap]);
+};
 
-const rucksacks = decode(input.split(`\n`))
-const overlappedItems = findOverlaps(rucksacks)
-const overlappedPriorities = calcPriority(overlappedItems)
-const score = overlappedPriorities.reduce((score, priority) => score + priority, 0)
+const rucksacks = decode(input.split("\n"));
+const overlappedItems = findOverlaps(rucksacks);
+const overlappedPriorities = calcPriority(overlappedItems);
+const score = overlappedPriorities.reduce((score, priority) => score + priority, 0);
 
-console.log(score)
+console.log(score);
