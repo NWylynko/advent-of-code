@@ -1,5 +1,5 @@
 {
   "[typescript]": {
-    "editor.defaultFormatter": "rome.rome"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
