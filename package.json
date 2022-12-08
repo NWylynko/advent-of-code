@@ -4,6 +4,6 @@
   "type": "module",
   "devDependencies": {
     "bun-types": "^0.2.0",
-    "rome": "^10.0.1"
+    "rome": "11.0.0"
   }
 }
